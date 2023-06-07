@@ -1,0 +1,11 @@
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\RpgMvc.exe
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\appsettings.Development.json
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\appsettings.json
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\RpgMvc.dll
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\RpgMvc.deps.json
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\RpgMvc.runtimeconfig.json
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\RpgMvc.pdb
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\Newtonsoft.Json.dll
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\Publish\Newtonsoft.Json.Bson.dll
