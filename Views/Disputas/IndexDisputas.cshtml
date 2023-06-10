@@ -60,6 +60,6 @@ throw new System.Exception(serialized);
 catch (System.Exception ex)
 {
 TempData["MensagemErro"] = ex.Message;
-return RedirectToAction("Index");
+return RedirectToAction("IndexDisputas");
 }
 }
