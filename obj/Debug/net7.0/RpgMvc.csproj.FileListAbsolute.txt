@@ -142,3 +142,8 @@ C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\Rp
 C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\obj\Debug\net7.0\RpgMvc.pdb
 C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\obj\Debug\net7.0\RpgMvc.genruntimeconfig.cache
 C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\obj\Debug\net7.0\ref\RpgMvc.dll
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\bin\Debug\net7.0\Publish\web.config
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\bin\Debug\net7.0\Publish\appsettings.Development.json
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\bin\Debug\net7.0\Publish\appsettings.json
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\bin\Debug\net7.0\Publish\RpgMvc.deps.json
+C:\Users\ycont\OneDrive\Área de Trabalho\DESENVOLVIMENTO_SISTEMAS\DS\AULA_17\RpgMvc\bin\Debug\net7.0\Publish\RpgMvc.runtimeconfig.json
