@@ -14,5 +14,8 @@ namespace RpgMvc.Models
 
         public PersonagemViewModel Personagem { get; set; }
         public int PersonagemId { get; set; }
+        public int ArmaId { get; set; }
+
+        public ArmaViewModel Arma {get; set;}
     }
 }

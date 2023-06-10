@@ -58,7 +58,8 @@
                 @Html.ActionLink("Listar Armar", "IndexArmas", "Armas", new{id = item.Id}) |
 @Html.ActionLink("Atribuir Habilidade", "Create", "PersonagemHabilidades", new{id = item.Id, nome = item.Nome}) |
 @Html.ActionLink("Restaurar pontos de vida", "RestaurarPontosVida", new {id = item.Id}, new {onclick = "return confirme('Deseja realmente restaurar os pontos de vida ?');"}) |
-@Html.ActionLink("Zerar Ranking", "ZerarRanking", new {id = item.Id}, new {onclick = "return confirme('Deseja realmente restaurar Ranking ?');"})
+@Html.ActionLink("Zerar Ranking", "ZerarRanking", new {id = item.Id}, new {onclick = "return confirme('Deseja realmente restaurar Ranking ?');"})| 
+@Html.ActionLink("Atrbuir Arma", "Create", "PersonagemHabilidades", new {id = item.Id, nome = item.Nome})
             </td>
         
         </tr>

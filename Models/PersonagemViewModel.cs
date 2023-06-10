@@ -22,4 +22,7 @@ namespace RpgMvc.Models
         public int Derrotas { get; set; }
 
     }
+    
+
+
 }

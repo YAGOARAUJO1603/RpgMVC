@@ -13,28 +13,25 @@ namespace RpgMvc.Controllers
     {
         public string uriBase = "http://Hugo-DS.somee.com/RpgApi/Armas/";
 
-        [HttpGet]
-        public async Task<ActionResult> IndexAsync()
+
+         [HttpGet("Armas/{id}")]
+        public async Task<ActionResult> IndexAsync(int id)
         {
             try
             {
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
-                string uriBuscaPersonagens = uriBase + "Armas/GetAll";
-                HttpResponseMessage response = await httpClient.GetAsync(uriBuscaPersonagens);
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + id.ToString());
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    List<ArmaViewModel> listaArmas = await Task.Run(() =>
-                        JsonConvert.DeserializeObject<List<ArmaViewModel>>(serialized));
+                    List<ArmaViewModel> lista = await Task.Run(() =>
+                    JsonConvert.DeserializeObject<List<ArmaViewModel>>(serialized));
 
-                    ViewBag.ListaAtacantes = listaArmas;
-                    ViewBag.ListaOponentes = listaArmas;
-
-                    return View();
+                    return View(lista);
                 }
                 else
                     throw new System.Exception(serialized);
@@ -47,18 +44,18 @@ namespace RpgMvc.Controllers
         }
 
 
-        [HttpGet("Delete/{habilidadeId}/{personagemId}")]
-        public async Task<ActionResult> DeleteAsync(int habilidadeId, int personagemId)
+        [HttpGet("Delete/{armaId}/{personagemId}")]
+        public async Task<ActionResult> DeleteAsync(int armaId, int personagemId)
         {
             try
             {
                 HttpClient httpClient = new HttpClient();
-                string uriComplementar = "DeletePersonagemHabilidade";
+                string uriComplementar = "DeleteArma";
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                PersonagemHabilidadesViewModel ph = new PersonagemHabilidadesViewModel();
-                ph.HabilidadeId = habilidadeId;
+                ArmaViewModel ph = new ArmaViewModel();
+                ph.ArmaId = armaId;
                 ph.PersonagemId = personagemId;
 
                 var content = new StringContent(JsonConvert.SerializeObject(ph));
@@ -67,7 +64,7 @@ namespace RpgMvc.Controllers
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    TempData["Mensagem"] = "Habilidade removida com sucesso";
+                    TempData["Mensagem"] = "Arma removida com sucesso";
                 else
                     throw new System.Exception(serialized);
             }
@@ -75,9 +72,11 @@ namespace RpgMvc.Controllers
             {
                 TempData["MensagemErro"] = ex.Message;
             }
-            return RedirectToAction("Index", new { Id = personagemId });
+            return RedirectToAction("Index", new { Id = armaId });
 
         }
+
+
 
 
 
