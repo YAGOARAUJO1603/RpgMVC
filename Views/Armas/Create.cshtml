@@ -1,59 +1,38 @@
 @model RpgMvc.Models.ArmaViewModel
-
-@if (@TempData["MensagemErro"] != null)
-{
-    <div class="alert alert-danger" role="alert">
-        @Html.Raw(TempData["MensagemErro"])</div>
-}
-
-@{
-    ViewBag.Title = "Nova Arma";
-}
-
-<h2>Criar uma Nova Arma</h2>
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <div class="Form-horizontal">
-        <hr />
-        <div class="form-group">
-            @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" }})
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Dano, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Dano, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Personagem, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Personagem, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.PersonagemId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.PersonagemId, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-        
-        <div class=form-group>
-            <div class="col-md-offset-2 col-md-6">
-                <input type="submit" value="Salvar" class="btn btn-primary">
-            </div>
-        </div>
-    </div>
-}
+@{ ViewBag.Title = "Create";}
+<h2>Cadastro de Arma para @Model.Personagem.Nome </h2>
+@using (Html.BeginForm()) 
+{ 
+ @Html.AntiForgeryToken() 
+ <div class="form-horizontal">
+ <hr /> 
+ <div class="form-group">
+ @Html.LabelFor(model => model.Personagem.Id, htmlAttributes: new { @class = "control-label col-md-2" }) 
+ <div class="col-md-6"> 
+ @Html.EditorFor(model => model.PersonagemId, new { htmlAttributes = new { @class = "formcontrol", @readonly = "readonly" } }) 
+ </div>
+ </div>
+<div class="form-group">
+ @Html.LabelFor(model => model.Personagem, htmlAttributes: new { @class = "control-label col-md-2" }) 
+ <div class="col-md-6">
+@Html.EditorFor(model => model.Personagem.Nome, new { htmlAttributes = new { @class = "formcontrol", @readonly = "readonly" } }) 
+ </div>
+ </div>
+<div class="form-group">
+ @Html.LabelFor(model => model.Arma, htmlAttributes: new { @class = "control-label col-md-2" }) 
+ <div class="col-md-6">
+ @Html.DropDownListFor(model => model.ArmaId, new SelectList(@ViewBag.ListaArmas, "Id", "Nome"), 
+ "---Selecione---", new { @class = "form-control" }) 
+ </div>
+ </div><br/> 
+ <div class="form-group">
+ <div class="col-md-offset-2 col-md-6">
+ <input type="submit" value="Salvar" class="btn btn-primary" />
+ </div> 
+ </div> 
+ </div>
+} 
 <div>
-    @Html.ActionLink("Retornar", "Index")
+@Html.ActionLink("Retornar às armas ", "Index", "Arma", new{id = Model.PersonagemId}) | 
+@Html.ActionLink("Retornar aos Personagens", "Index", "Personagens") 
 </div>
